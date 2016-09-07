@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="false">
+    <output url="file://$MODULE_DIR$/_build/eclipse/classes" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/test" isTestSource="true" />
+    </content>
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="module" module-name="lib-bumblebee" />
+    <orderEntry type="module" module-name="dtangler-core" />
+    <orderEntry type="module" module-name="dtangler-swingui" />
+    <orderEntry type="module" module-name="dtangler-ui" />
+    <orderEntry type="module" module-name="lib-forms" />
+    <orderEntry type="module" module-name="lib-junit-4.4" />
+    <orderEntry type="module" module-name="lib-uispec4j" />
+  </component>
+</module>

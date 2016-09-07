@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../../dtangler/src/dtangler-core/dtangler-core.iml" filepath="$PROJECT_DIR$/../../dtangler/src/dtangler-core/dtangler-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../dtangler/src/dtangler-swingui/dtangler-swingui.iml" filepath="$PROJECT_DIR$/../../dtangler/src/dtangler-swingui/dtangler-swingui.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../dtangler/src/dtangler-testsuites/dtangler-testsuites.iml" filepath="$PROJECT_DIR$/../../dtangler/src/dtangler-testsuites/dtangler-testsuites.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../dtangler/src/dtangler-ui/dtangler-ui.iml" filepath="$PROJECT_DIR$/../../dtangler/src/dtangler-ui/dtangler-ui.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../dtangler/src/lib-bumblebee/lib-bumblebee.iml" filepath="$PROJECT_DIR$/../../dtangler/src/lib-bumblebee/lib-bumblebee.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../dtangler/src/lib-forms/lib-forms.iml" filepath="$PROJECT_DIR$/../../dtangler/src/lib-forms/lib-forms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../dtangler/src/lib-junit-4.4/lib-junit-4.4.iml" filepath="$PROJECT_DIR$/../../dtangler/src/lib-junit-4.4/lib-junit-4.4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../dtangler/src/lib-uispec4j/lib-uispec4j.iml" filepath="$PROJECT_DIR$/../../dtangler/src/lib-uispec4j/lib-uispec4j.iml" />
+    </modules>
+  </component>
+</project>

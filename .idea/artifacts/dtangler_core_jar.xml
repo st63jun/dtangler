@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="dtangler-core:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/dtangler_core_jar</output-path>
+    <root id="archive" name="dtangler-core.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/../../dtangler/src/dtangler-core/MANIFEST.MF" />
+      </element>
+      <element id="module-output" name="dtangler-core" />
+    </root>
+  </artifact>
+</component>
