@@ -53,6 +53,14 @@ public class HelpText {
 			+
 
 			"\t"
+			+ CommandLineParser.getKeyString(ParserConstants.OUTPUT_FORMAT_KEY)
+			+ "<" + ParserConstants.OUTPUT_FORMAT_VALUE_TXT + "|" + ParserConstants.OUTPUT_FORMAT_VALUE_CSV + ">\n"
+			+ "\t\t"
+			+ "Specify format of DSM output."
+			+ "\t\tDefault value: txt\n\n"
+			+
+
+			"\t"
 			+ CommandLineParser
 					.getKeyString(ParserConstants.IGNORE_FILE_MASK_KEY)
 			+ "<mask for items ignored>\n"

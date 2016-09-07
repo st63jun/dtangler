@@ -44,8 +44,13 @@ public class ParserConstants {
 	// backward compatibility:
 	public static final String CLASS_PATH_KEY = "classPath";
 
+	// csv support
+	public static final String OUTPUT_FORMAT_KEY = "outputFormat";
+	public static final String OUTPUT_FORMAT_VALUE_TXT = "txt";
+	public static final String OUTPUT_FORMAT_VALUE_CSV = "csv";
+
 	public static final String[] VALID_KEYS = { DEPENDENCY_ENGINE_ID_KEY,
 			INPUT_KEY, CLASS_PATH_KEY, IGNORE_FILE_MASK_KEY,
 			CYCLES_ALLOWED_KEY, RULES_KEY, GROUPS_KEY, GROUP_KEY,
-			CONFIG_FILE_KEY, SCOPE_KEY };
+			CONFIG_FILE_KEY, SCOPE_KEY, OUTPUT_FORMAT_KEY };
 }

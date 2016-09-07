@@ -8,15 +8,14 @@ package org.dtangler.core;
 import org.dtangler.core.analysis.configurableanalyzer.ConfigurableDependencyAnalyzer;
 import org.dtangler.core.analysisresult.AnalysisResult;
 import org.dtangler.core.configuration.Arguments;
+import org.dtangler.core.configuration.ParserConstants;
 import org.dtangler.core.dependencies.Dependencies;
 import org.dtangler.core.dependencies.DependencyGraph;
 import org.dtangler.core.dependencyengine.DependencyEngine;
 import org.dtangler.core.dependencyengine.DependencyEngineFactory;
 import org.dtangler.core.dsmengine.DsmEngine;
 import org.dtangler.core.input.ArgumentBuilder;
-import org.dtangler.core.textui.DSMWriter;
-import org.dtangler.core.textui.ViolationWriter;
-import org.dtangler.core.textui.Writer;
+import org.dtangler.core.textui.*;
 
 public class CommandLineApp {
 
@@ -41,7 +40,17 @@ public class CommandLineApp {
 		AnalysisResult analysisResult = getAnalysisResult(arguments,
 				dependencies);
 
-		printDsm(dependencyGraph, analysisResult);
+		TextUI textUI;
+		if (ParserConstants.OUTPUT_FORMAT_VALUE_TXT.equals(arguments.getOutputFormat())) {
+			textUI = new DSMWriter(writer);
+		}
+		else if (ParserConstants.OUTPUT_FORMAT_VALUE_CSV.equals(arguments.getOutputFormat())) {
+			textUI = new CsvWriter(writer);
+		}
+		else {
+			textUI = new DSMWriter(writer);
+		}
+		printDsm(dependencyGraph, analysisResult, textUI);
 		return analysisResult.isValid();
 	}
 
@@ -52,8 +61,7 @@ public class CommandLineApp {
 	}
 
 	private void printDsm(DependencyGraph dependencies,
-			AnalysisResult analysisResult) {
-		DSMWriter textUI = new DSMWriter(writer);
+			AnalysisResult analysisResult, TextUI textUI) {
 		textUI
 				.printDsm(new DsmEngine(dependencies).createDsm(),
 						analysisResult);

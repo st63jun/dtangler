@@ -11,7 +11,7 @@ import org.dtangler.core.dsm.Dsm;
 import org.dtangler.core.dsm.DsmCell;
 import org.dtangler.core.dsm.DsmRow;
 
-public class DSMWriter {
+public class DSMWriter implements TextUI {
 
 	private final Writer writer;
 

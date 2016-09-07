@@ -66,6 +66,11 @@ public class Arguments {
 	 */
 	private String dependencyEngineId;
 
+	/**
+	 * Defines format when output DSM. 'txt' or 'csv' are available.
+	 */
+	private String outputFormat;
+
 	public Arguments createDeepCopy() {
 		Arguments copy = new Arguments();
 		copy.setInput(new ArrayList(getInput()));
@@ -169,7 +174,8 @@ public class Arguments {
 				&& this.ignoredFileMasks.equals(other.ignoredFileMasks)
 				&& nullSaveEquals(this.scope, other.scope)
 				&& nullSaveEquals(this.dependencyEngineId,
-						other.dependencyEngineId);
+						other.dependencyEngineId)
+				&& this.outputFormat.equals(other.outputFormat);
 	}
 
 	private boolean nullSaveEquals(Object o1, Object o2) {
@@ -183,7 +189,8 @@ public class Arguments {
 				+ (cyclesAllowed ? 0 : 17) + forbiddenDependencies.hashCode()
 				+ allowedDependencies.hashCode() + groups.hashCode()
 				+ ignoredFileMasks.hashCode() + nullSaveHashCode(scope)
-				+ nullSaveHashCode(dependencyEngineId);
+				+ nullSaveHashCode(dependencyEngineId)
+				+ outputFormat.hashCode();
 	}
 
 	private int nullSaveHashCode(Object obj) {
@@ -206,4 +213,7 @@ public class Arguments {
 		this.dependencyEngineId = dependencyEngineId;
 	}
 
+	public String getOutputFormat() { return outputFormat; }
+
+	public void setOutputFormat(String outputFormat) { this.outputFormat = outputFormat; }
 }

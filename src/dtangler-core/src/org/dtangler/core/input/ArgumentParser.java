@@ -43,6 +43,8 @@ public class ArgumentParser {
 			parseScope(values);
 		if (values.containsKey(ParserConstants.DEPENDENCY_ENGINE_ID_KEY))
 			parseDependencyEngineId(values);
+		if (values.containsKey(ParserConstants.OUTPUT_FORMAT_KEY))
+			parseOutputFormat(values);
 		return args;
 	}
 
@@ -64,6 +66,11 @@ public class ArgumentParser {
 		List<String> valueList = getValues(values,
 				ParserConstants.CLASS_PATH_KEY, ParserConstants.INPUT_KEY);
 		args.setInput(valueList);
+	}
+
+	private void parseOutputFormat(Map<String, String> values) {
+		args.setOutputFormat(values
+				.get(ParserConstants.OUTPUT_FORMAT_KEY));
 	}
 
 	private List<String> getValues(Map<String, String> values,
